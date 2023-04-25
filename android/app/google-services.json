@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "396031369992",
+    "firebase_url": "https://orepormim-674c6-default-rtdb.firebaseio.com",
+    "project_id": "orepormim-674c6",
+    "storage_bucket": "orepormim-674c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396031369992:android:367b6e20e7293311b642bd",
+        "android_client_info": {
+          "package_name": "kaleo.chat.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396031369992-sagslt2dvbbnctvadnjt186touimqla5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDubV_aIbxmKF3-cQBXZd_nQqSylxqW_Zc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396031369992-sagslt2dvbbnctvadnjt186touimqla5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "396031369992-jdlt3sg4fs4dtbjg3inj8sssn8d46mpa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kaleo.chat.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
