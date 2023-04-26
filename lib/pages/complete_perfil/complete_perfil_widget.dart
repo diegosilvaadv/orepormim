@@ -10,29 +10,31 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'complete_profile_model.dart';
-export 'complete_profile_model.dart';
+import 'complete_perfil_model.dart';
+export 'complete_perfil_model.dart';
 
-class CompleteProfileWidget extends StatefulWidget {
-  const CompleteProfileWidget({Key? key}) : super(key: key);
+class CompletePerfilWidget extends StatefulWidget {
+  const CompletePerfilWidget({Key? key}) : super(key: key);
 
   @override
-  _CompleteProfileWidgetState createState() => _CompleteProfileWidgetState();
+  _CompletePerfilWidgetState createState() => _CompletePerfilWidgetState();
 }
 
-class _CompleteProfileWidgetState extends State<CompleteProfileWidget> {
-  late CompleteProfileModel _model;
+class _CompletePerfilWidgetState extends State<CompletePerfilWidget> {
+  late CompletePerfilModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => CompleteProfileModel());
+    _model = createModel(context, () => CompletePerfilModel());
 
     _model.imageURLController ??= TextEditingController();
     _model.displayNameController ??= TextEditingController();
     _model.yourTitleController ??= TextEditingController();
+    _model.celularController ??= TextEditingController();
+    _model.idadeController ??= TextEditingController();
   }
 
   @override
@@ -51,7 +53,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget> {
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
         title: Text(
-          'Complete Profile',
+          'Completar Perfil',
           style: FlutterFlowTheme.of(context).headlineMedium,
         ),
         actions: [],
@@ -150,7 +152,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget> {
               decoration: InputDecoration(
                 labelText: 'Image URL',
                 labelStyle: FlutterFlowTheme.of(context).bodyMedium,
-                hintText: 'Copy an avatar here...',
+                hintText: 'Link da sua img (opicional)',
                 hintStyle: FlutterFlowTheme.of(context).bodyMedium,
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
@@ -197,9 +199,9 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget> {
               controller: _model.displayNameController,
               obscureText: false,
               decoration: InputDecoration(
-                labelText: 'Your Name',
+                labelText: 'Seu Nome',
                 labelStyle: FlutterFlowTheme.of(context).bodyMedium,
-                hintText: 'What name do you go by?',
+                hintText: 'Como posso te chamar?',
                 hintStyle: FlutterFlowTheme.of(context).bodyMedium,
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
@@ -246,9 +248,9 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget> {
               controller: _model.yourTitleController,
               obscureText: false,
               decoration: InputDecoration(
-                labelText: 'Your Title',
+                labelText: 'Sobre Voce',
                 labelStyle: FlutterFlowTheme.of(context).bodyMedium,
-                hintText: 'What do you do?',
+                hintText: 'Sobre Voce',
                 hintStyle: FlutterFlowTheme.of(context).bodyMedium,
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
@@ -290,6 +292,102 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget> {
             ),
           ),
           Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+            child: TextFormField(
+              controller: _model.celularController,
+              obscureText: false,
+              decoration: InputDecoration(
+                labelText: 'Celular',
+                labelStyle: FlutterFlowTheme.of(context).bodyMedium,
+                hintText: 'Celular',
+                hintStyle: FlutterFlowTheme.of(context).bodyMedium,
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                errorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                filled: true,
+                fillColor: FlutterFlowTheme.of(context).primaryBackground,
+                contentPadding:
+                    EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
+              ),
+              style: FlutterFlowTheme.of(context).titleSmall,
+              keyboardType: TextInputType.emailAddress,
+              validator: _model.celularControllerValidator.asValidator(context),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+            child: TextFormField(
+              controller: _model.idadeController,
+              obscureText: false,
+              decoration: InputDecoration(
+                labelText: 'Idade',
+                labelStyle: FlutterFlowTheme.of(context).bodyMedium,
+                hintText: 'Idade',
+                hintStyle: FlutterFlowTheme.of(context).bodyMedium,
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                errorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                filled: true,
+                fillColor: FlutterFlowTheme.of(context).primaryBackground,
+                contentPadding:
+                    EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
+              ),
+              style: FlutterFlowTheme.of(context).titleSmall,
+              keyboardType: TextInputType.emailAddress,
+              validator: _model.idadeControllerValidator.asValidator(context),
+            ),
+          ),
+          Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
             child: FFButtonWidget(
               onPressed: () async {
@@ -301,6 +399,8 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget> {
                   displayName: _model.displayNameController.text,
                   userRole: _model.yourTitleController.text,
                   createdTime: getCurrentTimestamp,
+                  phoneNumber: currentPhoneNumber,
+                  idade: valueOrDefault(currentUserDocument?.idade, ''),
                 );
                 await currentUserReference!.update(usersUpdateData);
                 await Navigator.push(
@@ -310,7 +410,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget> {
                   ),
                 );
               },
-              text: 'Save Profile',
+              text: 'Salvar e continuar',
               options: FFButtonOptions(
                 width: 230.0,
                 height: 60.0,

@@ -6,9 +6,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
+import '/pages/acesso/acesso_widget.dart';
 import '/pages/change_password/change_password_widget.dart';
 import '/pages/edit_profile/edit_profile_widget.dart';
-import '/pages/login/login_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -715,7 +715,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                 await Navigator.pushAndRemoveUntil(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => LoginWidget(),
+                                    builder: (context) => AcessoWidget(),
                                   ),
                                   (r) => false,
                                 );

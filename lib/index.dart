@@ -1,9 +1,9 @@
 // Export pages
-export '/pages/login/login_widget.dart' show LoginWidget;
-export '/pages/register/register_widget.dart' show RegisterWidget;
+export '/pages/acesso/acesso_widget.dart' show AcessoWidget;
+export '/pages/cadrastro/cadrastro_widget.dart' show CadrastroWidget;
 export '/pages/my_friends/my_friends_widget.dart' show MyFriendsWidget;
-export '/pages/complete_profile/complete_profile_widget.dart'
-    show CompleteProfileWidget;
+export '/pages/complete_perfil/complete_perfil_widget.dart'
+    show CompletePerfilWidget;
 export '/pages/forgot_password/forgot_password_widget.dart'
     show ForgotPasswordWidget;
 export '/pages/chat_details/chat_details_widget.dart' show ChatDetailsWidget;

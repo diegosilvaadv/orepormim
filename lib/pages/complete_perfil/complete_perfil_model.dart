@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class CompleteProfileModel extends FlutterFlowModel {
+class CompletePerfilModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
   bool isDataUploading = false;
@@ -28,6 +28,12 @@ class CompleteProfileModel extends FlutterFlowModel {
   // State field(s) for yourTitle widget.
   TextEditingController? yourTitleController;
   String? Function(BuildContext, String?)? yourTitleControllerValidator;
+  // State field(s) for celular widget.
+  TextEditingController? celularController;
+  String? Function(BuildContext, String?)? celularControllerValidator;
+  // State field(s) for idade widget.
+  TextEditingController? idadeController;
+  String? Function(BuildContext, String?)? idadeControllerValidator;
 
   /// Initialization and disposal methods.
 
@@ -37,6 +43,8 @@ class CompleteProfileModel extends FlutterFlowModel {
     imageURLController?.dispose();
     displayNameController?.dispose();
     yourTitleController?.dispose();
+    celularController?.dispose();
+    idadeController?.dispose();
   }
 
   /// Additional helper methods are added here.
