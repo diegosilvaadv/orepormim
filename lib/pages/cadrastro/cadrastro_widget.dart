@@ -139,7 +139,7 @@ class _CadrastroWidgetState extends State<CadrastroWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Lexend Deca',
-                              color: FlutterFlowTheme.of(context).tertiary,
+                              color: FlutterFlowTheme.of(context).primaryText,
                             ),
                         keyboardType: TextInputType.emailAddress,
                         validator: _model.emailAddressControllerValidator
@@ -225,7 +225,7 @@ class _CadrastroWidgetState extends State<CadrastroWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Lexend Deca',
-                              color: FlutterFlowTheme.of(context).tertiary,
+                              color: FlutterFlowTheme.of(context).primaryText,
                             ),
                         validator: _model.passwordControllerValidator
                             .asValidator(context),
@@ -310,7 +310,7 @@ class _CadrastroWidgetState extends State<CadrastroWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Lexend Deca',
-                              color: FlutterFlowTheme.of(context).tertiary,
+                              color: FlutterFlowTheme.of(context).primaryText,
                             ),
                         validator: _model.confirmPasswordControllerValidator
                             .asValidator(context),
