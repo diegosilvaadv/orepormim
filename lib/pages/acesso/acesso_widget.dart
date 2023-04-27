@@ -43,6 +43,8 @@ class _AcessoWidgetState extends State<AcessoWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).dark900,
@@ -69,9 +71,9 @@ class _AcessoWidgetState extends State<AcessoWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 24.0),
                   child: Image.asset(
-                    'assets/images/logoGeekMessaging.png',
-                    width: 160.0,
-                    height: 140.0,
+                    'assets/images/Gold_Minimalist_Feminine_Elegant_Heart_Logo.png',
+                    width: 200.0,
+                    height: 200.0,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -93,8 +95,12 @@ class _AcessoWidgetState extends State<AcessoWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: 'E-mail',
-                          labelStyle: FlutterFlowTheme.of(context).bodyMedium,
-                          hintText: 'E-mail',
+                          labelStyle: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: 'Lexend Deca',
+                                color: FlutterFlowTheme.of(context).primaryText,
+                              ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
@@ -138,7 +144,7 @@ class _AcessoWidgetState extends State<AcessoWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Lexend Deca',
-                              color: FlutterFlowTheme.of(context).tertiary,
+                              color: FlutterFlowTheme.of(context).primaryText,
                             ),
                         keyboardType: TextInputType.emailAddress,
                         validator: _model.emailTextControllerValidator
@@ -164,8 +170,12 @@ class _AcessoWidgetState extends State<AcessoWidget> {
                         controller: _model.passwordTextController,
                         obscureText: !_model.passwordVisibility,
                         decoration: InputDecoration(
-                          labelText: 'Senha',
-                          labelStyle: FlutterFlowTheme.of(context).bodyMedium,
+                          labelStyle: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: 'Lexend Deca',
+                                color: FlutterFlowTheme.of(context).primaryText,
+                              ),
                           hintText: 'Senha',
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
@@ -224,7 +234,7 @@ class _AcessoWidgetState extends State<AcessoWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Lexend Deca',
-                              color: FlutterFlowTheme.of(context).tertiary,
+                              color: FlutterFlowTheme.of(context).primaryText,
                             ),
                         validator: _model.passwordTextControllerValidator
                             .asValidator(context),

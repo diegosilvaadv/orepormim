@@ -46,6 +46,8 @@ class _CompletePerfilWidgetState extends State<CompletePerfilWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
@@ -399,8 +401,8 @@ class _CompletePerfilWidgetState extends State<CompletePerfilWidget> {
                   displayName: _model.displayNameController.text,
                   userRole: _model.yourTitleController.text,
                   createdTime: getCurrentTimestamp,
-                  phoneNumber: currentPhoneNumber,
-                  idade: valueOrDefault(currentUserDocument?.idade, ''),
+                  phoneNumber: _model.celularController.text,
+                  idade: _model.idadeController.text,
                 );
                 await currentUserReference!.update(usersUpdateData);
                 await Navigator.push(

@@ -44,6 +44,8 @@ class _CadrastroWidgetState extends State<CadrastroWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).dark900,
@@ -70,7 +72,7 @@ class _CadrastroWidgetState extends State<CadrastroWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 24.0),
                   child: Image.asset(
-                    'assets/images/logoGeekMessaging.png',
+                    'assets/images/Gold_Minimalist_Feminine_Elegant_Heart_Logo.png',
                     width: 160.0,
                     height: 140.0,
                     fit: BoxFit.cover,
@@ -94,8 +96,12 @@ class _CadrastroWidgetState extends State<CadrastroWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: 'E-mail',
-                          labelStyle: FlutterFlowTheme.of(context).bodyMedium,
-                          hintText: 'E-mail',
+                          labelStyle: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: 'Lexend Deca',
+                                color: FlutterFlowTheme.of(context).primaryText,
+                              ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
@@ -166,8 +172,12 @@ class _CadrastroWidgetState extends State<CadrastroWidget> {
                         obscureText: !_model.passwordVisibility,
                         decoration: InputDecoration(
                           labelText: 'Senha',
-                          labelStyle: FlutterFlowTheme.of(context).bodyMedium,
-                          hintText: 'Senha',
+                          labelStyle: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: 'Lexend Deca',
+                                color: FlutterFlowTheme.of(context).primaryText,
+                              ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
@@ -251,8 +261,12 @@ class _CadrastroWidgetState extends State<CadrastroWidget> {
                         obscureText: !_model.confirmPasswordVisibility,
                         decoration: InputDecoration(
                           labelText: 'Confirmar Senha',
-                          labelStyle: FlutterFlowTheme.of(context).bodyMedium,
-                          hintText: 'Confirmar Senha',
+                          labelStyle: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: 'Lexend Deca',
+                                color: FlutterFlowTheme.of(context).primaryText,
+                              ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
