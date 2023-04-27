@@ -690,26 +690,26 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                       FFAppState().drawer = false;
                                     });
                                     if (animationsMap[
-                                            'containerOnActionTriggerAnimation1'] !=
+                                            'containerOnActionTriggerAnimation2'] !=
                                         null) {
                                       animationsMap[
-                                              'containerOnActionTriggerAnimation1']!
+                                              'containerOnActionTriggerAnimation2']!
                                           .controller
                                           .reverse();
                                     }
                                     if (animationsMap[
-                                            'containerOnActionTriggerAnimation1'] !=
+                                            'iconOnActionTriggerAnimation1'] !=
                                         null) {
                                       animationsMap[
-                                              'containerOnActionTriggerAnimation1']!
+                                              'iconOnActionTriggerAnimation1']!
                                           .controller
                                           .forward(from: 0.0);
                                     }
                                     if (animationsMap[
-                                            'containerOnActionTriggerAnimation1'] !=
+                                            'iconOnActionTriggerAnimation2'] !=
                                         null) {
                                       animationsMap[
-                                              'containerOnActionTriggerAnimation1']!
+                                              'iconOnActionTriggerAnimation2']!
                                           .controller
                                           .reverse();
                                     }
@@ -726,26 +726,26 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                       FFAppState().drawer = true;
                                     });
                                     if (animationsMap[
-                                            'containerOnActionTriggerAnimation1'] !=
+                                            'containerOnActionTriggerAnimation2'] !=
                                         null) {
                                       animationsMap[
-                                              'containerOnActionTriggerAnimation1']!
+                                              'containerOnActionTriggerAnimation2']!
                                           .controller
                                           .forward(from: 0.0);
                                     }
                                     if (animationsMap[
-                                            'containerOnActionTriggerAnimation1'] !=
+                                            'iconOnActionTriggerAnimation1'] !=
                                         null) {
                                       animationsMap[
-                                              'containerOnActionTriggerAnimation1']!
+                                              'iconOnActionTriggerAnimation1']!
                                           .controller
                                           .reverse();
                                     }
                                     if (animationsMap[
-                                            'containerOnActionTriggerAnimation1'] !=
+                                            'iconOnActionTriggerAnimation2'] !=
                                         null) {
                                       animationsMap[
-                                              'containerOnActionTriggerAnimation1']!
+                                              'iconOnActionTriggerAnimation2']!
                                           .controller
                                           .forward(from: 0.0);
                                     }
